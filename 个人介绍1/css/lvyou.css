@@ -1,0 +1,47 @@
+@charset "utf-8";
+.box {
+	height: 1200px;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.header {
+	height: 300px;
+	width: 800px;
+}
+.nav {
+	height: 50px;
+	width: 800px;
+	background-color: #F9DBE7;
+	color: #F9C;
+	font-weight: bolder;
+}
+.content {
+	height: 800px;
+	width: 800px;
+}
+.bottom {
+	text-align: center;
+	height: 40px;
+	width: 800px;
+	padding-top: 10px;
+	background-color: #F9DBE7;
+	color: #F9C;
+	font-weight: bolder;
+}
+a:link {
+	color: #F9C;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #F9C;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}/* CSS Document */
+
