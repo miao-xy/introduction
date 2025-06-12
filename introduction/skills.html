@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>证书&技能- 个人简历网站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">个人简历</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="education.html">学习成绩</a></li>
+                <li><a href="experience.html">在校经历</a></li>
+                <li><a href="skills.html" class="active">证书&技能</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="skills-main">
+        <div class="container">
+            <h1 class="page-title fade-in">证书&技能</h1>
+
+            <div class="skills-container">
+                <div class="skills-section fade-in">
+                    <h2 class="section-title">技能</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-level="精通">
+                            <img src="images/19.jpg" >
+                            <h3>前端开发</h3>
+                            <div class="skill-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>VS Code</span>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-level="熟练">
+                            <img src="images/20.jpg">
+                            <h3>数学基础</h3>
+                            <div class="skill-tags">
+                                <span>高等数学</span>
+                                <span>离散数学</span>
+                                <span>线性代数</span>
+                                <span>概率论与数理统计</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificates-section fade-in">
+                    <h2 class="section-title">证书</h2>
+                    <div class="certificates-grid">
+                        <div class="certificate-card">
+                            <div class="certificate-image">
+                                <img src="images/18.jpg">
+                            </div>
+                            <div class="certificate-info">
+                                <h3>普通话二甲</h3>
+                                <p class="issuer">发证机构：国家语委普通话与文字应用培训测试中心</p>
+                                <p class="date">获得时间：2024年5月</p>
+                                <button class="view-btn" onclick="showCertificate('images/18.jpg')">
+                                    查看证书 <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card">
+                            <div class="certificate-image">
+                                <img src="images/banner5.png">
+                            </div>
+                            <div class="certificate-info">
+                                <h3>第十届"东方财富杯"全国大学生金融挑战赛省赛二等奖</h3>
+                                <p class="issuer">发证机构：东方财富信息股份有限公司</p>
+                                <p class="date">获得时间：2024年10月</p>
+                                <button class="view-btn" onclick="showCertificate('images/banner5.png')">
+                                    查看证书 <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-section fade-in">
+                    <h2 class="section-title">其余证书展示</h2>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide">
+                                <img src="images/banner1.jpg" alt="作品展示1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner2.jpg" alt="作品展示2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner3.jpg" alt="作品展示3">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner4.png" alt="作品展示4">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner5.png" alt="作品展示5">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner6.png" alt="作品展示6">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner7.png" alt="作品展示7">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner8.png" alt="作品展示8">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner9.png" alt="作品展示9">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/banner10.jpg" alt="作品展示10">
+                            </div>
+
+                        </div>
+                        <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
+                        <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 证书查看弹窗 -->
+        <div id="certificateModal" class="modal">
+            <span class="close-modal">&times;</span>
+            <img id="certificateImage" src="" alt="证书大图">
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
