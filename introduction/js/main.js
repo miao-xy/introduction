@@ -65,6 +65,62 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.fade-in').forEach((element, index) => {
         element.style.animationDelay = `${index * 0.1}s`;
     });
+
+    // 获取按钮元素
+    const backToTopButton = document.getElementById('backToTop');
+    const themeToggleButton = document.getElementById('themeToggle');
+
+    // 返回顶部功能
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // 主题切换功能
+    function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        // 更新主题
+        html.setAttribute('data-theme', newTheme);
+        
+        // 更新图标
+        const icon = themeToggleButton.querySelector('i');
+        if (newTheme === 'dark') {
+            icon.className = 'fas fa-sun';
+        } else {
+            icon.className = 'fas fa-moon';
+        }
+        
+        // 保存主题设置
+        localStorage.setItem('theme', newTheme);
+    }
+
+    // 添加主题切换按钮点击事件
+    themeToggleButton.addEventListener('click', toggleTheme);
+
+    // 初始化主题
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // 设置初始图标
+    const icon = themeToggleButton.querySelector('i');
+    if (savedTheme === 'dark') {
+        icon.className = 'fas fa-sun';
+    } else {
+        icon.className = 'fas fa-moon';
+    }
 });
 
 function showCertificate(imageSrc) {
